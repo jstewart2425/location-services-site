@@ -1,0 +1,466 @@
+/*
+ * style.css
+ *
+ * Additional styling to complement the Bootstrap defaults used throughout
+ * the location services website. Colours, spacing and bespoke components
+ * defined here aim to provide a polished and cohesive look while keeping
+ * the markup clean. Feel free to tweak these values to suit your own
+ * branding and personality.
+ */
+
+/* Global typography enhancements */
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Generic container to centre content and set a max width */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid system replacements
+ * The original pages used Bootstrap's `row` and `col-` classes. To
+ * maintain a similar layout without the framework we define our own
+ * simple grid. The `.row` class becomes a flex container with
+ * wrapping enabled. Columns default to full width but can be
+ * constrained using responsive modifiers (see `.col-md-4`).
+ */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+.row > * {
+  padding: 0.5rem;
+  flex: 1 0 100%;
+}
+
+/* At medium breakpoint and above, third columns occupy one third
+ * of the row. We can adjust these as needed for other layouts. */
+@media (min-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  /* Generic medium column widths */
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-md-8 {
+    flex: 0 0 66.6667%;
+    max-width: 66.6667%;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Large breakpoint columns */
+  .col-lg-7 {
+    flex: 0 0 58.3333%;
+    max-width: 58.3333%;
+  }
+  .col-lg-5 {
+    flex: 0 0 41.6667%;
+    max-width: 41.6667%;
+  }
+  .col-lg-7.mb-4 {
+    margin-bottom: 0;
+  }
+  .col-lg-5.mb-4 {
+    margin-bottom: 0;
+  }
+}
+
+/* Utility classes to align items centre */
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Buttons
+ * Define our own button styles rather than relying on Bootstrap.
+ */
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #66fcf1;
+  color: #0a192f;
+}
+.btn-primary:hover {
+  background-color: #45a29e;
+  color: #0a192f;
+}
+
+.btn-outline-light {
+  background-color: transparent;
+  border: 2px solid #66fcf1;
+  color: #66fcf1;
+}
+.btn-outline-light:hover {
+  background-color: #66fcf1;
+  color: #0a192f;
+}
+
+.btn-lg {
+  font-size: 1.1rem;
+}
+
+/* Outline button for primary actions */
+.btn-outline-primary {
+  background-color: transparent;
+  border: 2px solid #66fcf1;
+  color: #0a192f;
+}
+.btn-outline-primary:hover {
+  background-color: #66fcf1;
+  color: #0a192f;
+}
+
+/* Form controls */
+.form-control,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-check-label {
+  margin-left: 0.25rem;
+}
+
+/* Spacing utility classes */
+.my-5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.gap-3 {
+  gap: 1rem;
+}
+.d-flex {
+  display: flex;
+}
+
+/* Flexbox helper classes */
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+.h-100 {
+  height: 100%;
+}
+.shadow-sm {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.align-self-start {
+  align-self: flex-start;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+.me-2 {
+  margin-right: 0.5rem;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Card replacements */
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Muted text utility */
+.text-muted {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Badges used on the detail page */
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.4rem;
+  line-height: 1;
+  background-color: #66fcf1;
+  color: #0a192f;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  margin-right: 0.5rem;
+  color: #6c757d;
+}
+
+.breadcrumb-item a {
+  color: #66fcf1;
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #0a192f;
+  font-weight: 600;
+}
+
+/* Primary background utility (used on badges) */
+.bg-primary {
+  background-color: #66fcf1;
+  color: #0a192f;
+}
+
+/* Search input on library page */
+#searchInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/*
+ * Navigation
+ *
+ * We don't rely on any external framework, so the navigation bar
+ * must be fully styled here. The bar uses a dark background with
+ * horizontal links. On smaller screens the links stack vertically.
+ */
+
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: #0a192f;
+  color: #f5f5f5;
+}
+
+nav.navbar .navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+nav.navbar ul.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav.navbar ul.navbar-nav li.nav-item a.nav-link {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+/* Add horizontal spacing between navigation items */
+nav.navbar ul.navbar-nav li.nav-item {
+  margin-right: 1.25rem;
+}
+nav.navbar ul.navbar-nav li.nav-item:last-child {
+  margin-right: 0;
+}
+
+/* Add left margin to all navigation items except the first to create spacing
+   when browser fails to honour right margin on inline elements */
+nav.navbar ul.navbar-nav li.nav-item + li.nav-item {
+  margin-left: 1.25rem;
+}
+
+nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover,
+nav.navbar ul.navbar-nav li.nav-item a.nav-link:focus,
+nav.navbar ul.navbar-nav li.nav-item a.nav-link.active {
+  color: #66fcf1;
+}
+
+/* Responsive navigation: stack links on narrow screens */
+@media (max-width: 600px) {
+  nav.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav.navbar ul.navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  nav.navbar ul.navbar-nav li.nav-item a.nav-link {
+    padding: 0.5rem 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Hero section used on the home page */
+.hero {
+  background: linear-gradient(90deg, #0a192f 0%, #172a45 100%);
+  color: #f5f5f5;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.hero .btn-primary {
+  background-color: #66fcf1;
+  border-color: #66fcf1;
+  color: #0a192f;
+  font-weight: 600;
+}
+
+.hero .btn-primary:hover {
+  background-color: #45a29e;
+  border-color: #45a29e;
+}
+
+/* Card customisations on the library page */
+.card {
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Detail page image */
+#detailImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer styling */
+footer {
+  background-color: #0a192f;
+  color: #f5f5f5;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: #66fcf1;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

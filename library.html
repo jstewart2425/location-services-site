@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Services | Location Library</title>
+    <!-- Removed external Bootstrap and icon dependencies. All styling is handled in style.css -->
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar sticky-top">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap">
+        <a class="navbar-brand" href="index.html">Location Services</a>
+        <ul class="navbar-nav d-flex">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="library.html">Locations</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="list-property.html">List Your Property</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Search & header -->
+    <section class="py-5" style="background-color: #f8f9fa; border-bottom: 1px solid #e0e0e0;">
+      <div class="container">
+        <h1 class="mb-3">Location Library</h1>
+        <p class="mb-4">
+          Browse our curated collection of film‑friendly locations. Use the search
+          field to narrow down results by name, category or city.
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <!-- Simple search input without external icons -->
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control"
+              placeholder="Search locations..."
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locations Grid -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row" id="locationsContainer">
+          <!-- Cards will be injected here by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p class="mb-2">&copy; 2025 Location Services. All rights reserved.</p>
+        <p>
+          <a href="about.html">About</a> |
+          <a href="contact.html">Contact</a> |
+          <a href="list-property.html">List Your Property</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

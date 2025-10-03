@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Services | Contact Us</title>
+    <!-- Removed external Bootstrap and icon dependencies. All styling is handled in style.css -->
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar sticky-top">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap">
+        <a class="navbar-brand" href="index.html">Location Services</a>
+        <ul class="navbar-nav d-flex">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="library.html">Locations</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="list-property.html">List Your Property</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contact Content -->
+    <section class="py-5" style="background-color: #f8f9fa; border-bottom: 1px solid #e0e0e0;">
+      <div class="container">
+        <h1 class="mb-3">Contact Us</h1>
+        <p class="lead">
+          Have questions about our services or need assistance finding the right
+          location? Get in touch and our team will gladly help.
+        </p>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <h3>Send us a message</h3>
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="contactName" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contactName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="contactEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="contactEmail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="contactSubject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contactSubject"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="contactMessage" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="contactMessage"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+          <div class="col-md-6 mb-4">
+            <h3>Our Office</h3>
+            <p>
+              123 Ocean Avenue, Suite 400
+              <br />Santa Monica, CA 90401
+            </p>
+            <p>
+              Phone: (555) 123‑4567
+            </p>
+            <p>
+              Email:
+              <a href="mailto:info@locationservices.com"
+                >info@locationservices.com</a
+              >
+            </p>
+            <h3>Business Hours</h3>
+            <p>
+              Monday – Friday: 9:00 AM – 6:00 PM
+              <br />Weekends: By appointment only
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p class="mb-2">&copy; 2025 Location Services. All rights reserved.</p>
+        <p>
+          <a href="about.html">About</a> |
+          <a href="contact.html">Contact</a> |
+          <a href="list-property.html">List Your Property</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

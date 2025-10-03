@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Services | Location Detail</title>
+    <!-- Removed external Bootstrap and icon dependencies. All styling is handled in style.css -->
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="detailPage">
+    <!-- Navigation -->
+    <nav class="navbar sticky-top">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap">
+        <a class="navbar-brand" href="index.html">Location Services</a>
+        <ul class="navbar-nav d-flex">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="library.html">Locations</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="list-property.html">List Your Property</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Detail Header -->
+    <section class="py-5" style="background-color: #f8f9fa; border-bottom: 1px solid #e0e0e0;">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="library.html">Locations</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="breadcrumbName">
+              <!-- Name inserted here -->
+            </li>
+          </ul>
+        </nav>
+        <h1 class="mb-2" style="font-size: 2rem; font-weight: 600;">Location Details</h1>
+      </div>
+    </section>
+
+    <!-- Main content -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 mb-4">
+            <img id="detailImage" src="" alt="Location image" />
+          </div>
+          <div class="col-lg-5 mb-4">
+            <h2 id="detailName" class="mb-2"></h2>
+            <p class="text-muted mb-2">
+              <span class="badge bg-primary" id="detailCategory"></span>
+            </p>
+            <p class="mb-3"><span id="detailAddress"></span></p>
+            <p id="detailDescription"></p>
+            <h5>Key Features</h5>
+            <ul id="detailFeatures"></ul>
+          </div>
+        </div>
+        <hr class="my-5" />
+        <div class="row">
+          <div class="col-lg-7">
+            <h3>Book this location</h3>
+            <p>
+              Interested in securing this space for your production? Submit a
+              booking request below and we’ll get back to you with
+              availability and pricing.
+            </p>
+            <form id="bookingForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="bookName" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="bookName"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="bookEmail" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="bookEmail"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="bookDate" class="form-label">Desired Date</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="bookDate"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="bookPhone" class="form-label">Phone</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="bookPhone"
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="bookMessage" class="form-label">Additional Details</label>
+                  <textarea
+                    class="form-control"
+                    id="bookMessage"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">
+                    Submit Request
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p class="mb-2">&copy; 2025 Location Services. All rights reserved.</p>
+        <p>
+          <a href="about.html">About</a> |
+          <a href="contact.html">Contact</a> |
+          <a href="list-property.html">List Your Property</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
